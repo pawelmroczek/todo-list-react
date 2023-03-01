@@ -1,5 +1,5 @@
-const Header = ({header}) => (
-	<header>
+const Header = ({ header }) => (
+  <header>
     <h1>{header}</h1>
   </header>
 );
