@@ -1,4 +1,41 @@
-# Task List
+# To-Do List
+
+This project is a to-do list web application built with React, using JSX syntax. The application allows users to add tasks, change their status or remove them. Also, users can hide already completed tasks or finish all tasks with one click of a button.
+
+## Table of Contents
+
+- [Technologies Used](#technologies-used)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+
+## Technologies Used
+
+The following technologies were used in this project:
+
+- React
+- JSX
+- BEM
+- normalize.css
+
+## Usage
+
+To use the application, simply navigate to the [to-do list page](https://pawelmroczek.github.io/todo-list-react/) and follow these steps:
+
+1. Input a task you wish to add
+2. Click the "Add Task" button to add the task to the list
+3. Click on the checkbox to mark a task as completed
+4. Click the "Remove" button to remove a task from the list
+5. Click the "Hide Completed" button to hide all completed tasks
+6. Click the "Finish All" button to mark all tasks as completed
+
+## Screenshots
+
+Here is a screenshot of the to-do list page:
+
+![Screenshot of the To-Do List page](src/images/ssOfPage.png)
+
+Thank you for using the To-Do List!
+
 
 ## Getting Started with Create React App
 
