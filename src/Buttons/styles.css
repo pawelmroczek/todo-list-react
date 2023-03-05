@@ -1,28 +1,28 @@
-.tasks__headerButton{
-    border: none;
-    background:none;
-    color: teal;
-    font-weight: 300;
-    font-size: 18px;
-    transition: 500ms ease-in-out;
-    cursor: pointer;
-  }
-  
-  .tasks__headerButton:hover{
-    color: rgb(4, 187, 187);
-  }
-  
-  .tasks__headerButton:disabled{
-    color: lightgray;
-  }
-  
-  .tasks__headerButton:disabled:hover{
-    color: lightgray;
-  }
+.tasks__headerButton {
+  border: none;
+  background: none;
+  color: teal;
+  font-weight: 300;
+  font-size: 18px;
+  transition: 500ms ease-in-out;
+  cursor: pointer;
+}
 
-  .buttonContener {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 20px;
-  }
+.tasks__headerButton:hover {
+  color: rgb(4, 187, 187);
+}
+
+.tasks__headerButton:disabled {
+  color: lightgray;
+}
+
+.tasks__headerButton:disabled:hover {
+  color: lightgray;
+}
+
+.buttonContener {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 20px;
+}

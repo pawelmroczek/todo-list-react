@@ -1,10 +1,7 @@
-import "./style.css"
+import "./style.css";
 
+const Container = ({ children }) => (
+  <main className="body__content">{children}</main>
+);
 
-const Container =({children})=>(
-    <main className="body__content">
-        {children}
-    </main>
-)
-
-export default Container
+export default Container;

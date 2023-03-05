@@ -35,37 +35,53 @@ function App() {
     );
   };
 
-  const removeTask =(id)=>{
-    setTasks(tasks=>tasks.filter(task=>task.id!==id))
-  }
+  const removeTask = (id) => {
+    setTasks((tasks) => tasks.filter((task) => task.id !== id));
+  };
 
-  const addingNewTask =(newTaskValue)=>{
-    setTasks(tasks=>tasks=[
-      ...tasks,
-      {content:newTaskValue,
-      done:false,
-      id:tasks.length ? tasks[tasks.length-1].id+1 : 1}
-    ])
-  }
+  const addingNewTask = (newTaskValue) => {
+    setTasks(
+      (tasks) =>
+        (tasks = [
+          ...tasks,
+          {
+            content: newTaskValue,
+            done: false,
+            id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
+          },
+        ])
+    );
+  };
 
+  const toggleTaskDone = (id) => {
+    setTasks((tasks) =>
+      tasks.map((task) => {
+        if (task.id === id) {
+          return { ...task, done: !task.done };
+        }
 
-  const toggleTaskDone =(id)=>{
-    setTasks(tasks=>tasks.map(task=>{
-      if(task.id===id){
-        return {...task,done:!task.done};
-      }
-
-      return task
-    }))
-  }
+        return task;
+      })
+    );
+  };
 
   return (
     <Container>
       <Header header={"Lista zadań"} />
-      <Section header="Dodaj nowe zadanie" body={<Form addingNewTask={addingNewTask}/>} />
+      <Section
+        header="Dodaj nowe zadanie"
+        body={<Form addingNewTask={addingNewTask} />}
+      />
       <Section
         header="Lista zadań"
-        body={<Tasks tasks={tasks} hideDone={hideDone} toggleTaskDone={toggleTaskDone} removeTask={removeTask}/>}
+        body={
+          <Tasks
+            tasks={tasks}
+            hideDone={hideDone}
+            toggleTaskDone={toggleTaskDone}
+            removeTask={removeTask}
+          />
+        }
         extraContent={
           <Buttons
             tasks={tasks}
