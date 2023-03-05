@@ -22,11 +22,11 @@ The following technologies were used in this project:
 To use the application, simply navigate to the [to-do list page](https://pawelmroczek.github.io/todo-list-react/) and follow these steps:
 
 1. Input a task you wish to add
-2. Click the "Add Task" button to add the task to the list
+2. Click the "Dodaj zadanie" button to add the task to the list
 3. Click on the checkbox to mark a task as completed
-4. Click the "Remove" button to remove a task from the list
-5. Click the "Hide Completed" button to hide all completed tasks
-6. Click the "Finish All" button to mark all tasks as completed
+4. Click the "🗑" button to remove a task from the list
+5. Click the "Ukryj ukończone" button to hide all completed tasks
+6. Click the "Ukończ wszystkie" button to mark all tasks as completed
 
 ## Screenshots
 
