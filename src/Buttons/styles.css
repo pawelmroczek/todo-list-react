@@ -20,7 +20,7 @@
   color: lightgray;
 }
 
-.buttonContener {
+.buttonContainer {
   display: flex;
   align-items: center;
   gap: 5px;
