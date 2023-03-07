@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./styles.css";
 
-const Form = ({ addingNewTask }) => {
+const Form = ({ addNewTask }) => {
   const [newTaskValue, setNewTaskValue] = useState("");
 
   const onSubmit = (event) => {
@@ -9,7 +9,7 @@ const Form = ({ addingNewTask }) => {
     const trimmedValue=newTaskValue.trim();
 
     if (trimmedValue) {
-      addingNewTask(newTaskValue);
+      addNewTask(newTaskValue);
       setNewTaskValue("");
     }
   };
