@@ -4,23 +4,16 @@ import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Container from "./Container";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      content: `Oto prosta lista zadań`,
-      done: false,
-    },
-    {
-      id: 2,
-      content: `Mozesz przełączać status zadania zielonym przyciskiem bądź usuwać juz zrobione zadania czerwonym`,
-      done: true,
-    },
-  ]);
+  const [tasks, setTasks] = useState(JSON.parse(localStorage.getItem("tasks")));
 
   const [hideDone, setHideDone] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  });
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
@@ -39,7 +32,7 @@ function App() {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
   };
 
-  const addingNewTask = (newTaskValue) => {
+  const addNewTask = (newTaskValue) => {
     setTasks(
       (tasks) =>
         (tasks = [
@@ -70,7 +63,7 @@ function App() {
       <Header header={"Lista zadań"} />
       <Section
         header="Dodaj nowe zadanie"
-        body={<Form addingNewTask={addingNewTask} />}
+        body={<Form addNewTask={addNewTask} />}
       />
       <Section
         header="Lista zadań"
