@@ -5,6 +5,7 @@ export const Container = styled.section`
   padding: 0px;
   box-shadow: 0px 0px 18px -11px rgba(66, 68, 90, 1);
   margin-top: 10px;
+  color:${({theme})=>theme.primeColor};
 `;
 
 export const Header = styled.header`
