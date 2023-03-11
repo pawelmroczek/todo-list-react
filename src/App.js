@@ -5,15 +5,21 @@ import Buttons from "./Buttons";
 import Section from "./Section";
 import Container from "./Container";
 import { useEffect, useState } from "react";
+import { ThemeProvider } from "styled-components";
+import theme from "./theme";
 
 function App() {
-  const [tasks, setTasks] = useState(localStorage.getItem("tasks")?JSON.parse(localStorage.getItem("tasks")):[]);
+  const [tasks, setTasks] = useState(
+    localStorage.getItem("tasks")
+      ? JSON.parse(localStorage.getItem("tasks"))
+      : []
+  );
 
   const [hideDone, setHideDone] = useState(false);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
-  },[tasks]);
+  }, [tasks]);
 
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
@@ -59,32 +65,34 @@ function App() {
   };
 
   return (
-    <Container>
-      <Header header={"Lista zadań"} />
-      <Section
-        header="Dodaj nowe zadanie"
-        body={<Form addNewTask={addNewTask} />}
-      />
-      <Section
-        header="Lista zadań"
-        body={
-          <Tasks
-            tasks={tasks}
-            hideDone={hideDone}
-            toggleTaskDone={toggleTaskDone}
-            removeTask={removeTask}
-          />
-        }
-        extraContent={
-          <Buttons
-            tasks={tasks}
-            hideDone={hideDone}
-            toggleHideDone={toggleHideDone}
-            doneAllTasks={doneAllTasks}
-          />
-        }
-      />
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <Header header={"Lista zadań"} />
+        <Section
+          header="Dodaj nowe zadanie"
+          body={<Form addNewTask={addNewTask} />}
+        />
+        <Section
+          header="Lista zadań"
+          body={
+            <Tasks
+              tasks={tasks}
+              hideDone={hideDone}
+              toggleTaskDone={toggleTaskDone}
+              removeTask={removeTask}
+            />
+          }
+          extraContent={
+            <Buttons
+              tasks={tasks}
+              hideDone={hideDone}
+              toggleHideDone={toggleHideDone}
+              doneAllTasks={doneAllTasks}
+            />
+          }
+        />
+      </Container>
+    </ThemeProvider>
   );
 }
 
