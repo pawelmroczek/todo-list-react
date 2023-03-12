@@ -7,61 +7,16 @@ import Container from "./Container";
 import { useEffect, useState } from "react";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme";
+import { useTasks } from "./useTasks";
 
 function App() {
-  const [tasks, setTasks] = useState(
-    localStorage.getItem("tasks")
-      ? JSON.parse(localStorage.getItem("tasks"))
-      : []
-  );
+  const { tasks, removeTask, toggleTaskDone, doneAllTasks, addNewTask } =
+    useTasks();
 
   const [hideDone, setHideDone] = useState(false);
 
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }, [tasks]);
-
   const toggleHideDone = () => {
     setHideDone((hideDone) => !hideDone);
-  };
-
-  const doneAllTasks = () => {
-    setTasks((tasks) =>
-      tasks.map((task) => ({
-        ...task,
-        done: true,
-      }))
-    );
-  };
-
-  const removeTask = (id) => {
-    setTasks((tasks) => tasks.filter((task) => task.id !== id));
-  };
-
-  const addNewTask = (newTaskValue) => {
-    setTasks(
-      (tasks) =>
-        (tasks = [
-          ...tasks,
-          {
-            content: newTaskValue,
-            done: false,
-            id: tasks.length ? tasks[tasks.length - 1].id + 1 : 1,
-          },
-        ])
-    );
-  };
-
-  const toggleTaskDone = (id) => {
-    setTasks((tasks) =>
-      tasks.map((task) => {
-        if (task.id === id) {
-          return { ...task, done: !task.done };
-        }
-
-        return task;
-      })
-    );
   };
 
   return (
