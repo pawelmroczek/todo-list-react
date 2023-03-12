@@ -4,7 +4,7 @@ import Tasks from "./Tasks";
 import Buttons from "./Buttons";
 import Section from "./Section";
 import Container from "./Container";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import { ThemeProvider } from "styled-components";
 import theme from "./theme";
 import { useTasks } from "./useTasks";
