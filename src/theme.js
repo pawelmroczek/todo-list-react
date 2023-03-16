@@ -1,12 +1,17 @@
 const theme={
-  media:{
-    phone:767
+  colors:{
+    lightgray:"lightgray",
+    teal:"teal",
+    alto:"rgb(220, 220, 220)",
+    black:"black",
+    white:"white",
+    gunPowder:"rgb(66, 68, 90)",
+    forestGreen:"rgb(27, 134, 34)",
+    amaranth:"rgb(240, 47, 68)",
   },
-  buttonsColor:"teal",
-  buttonsColorHover:"rgb(4, 187, 187)",
-  primeColor:"black",
-  borderBottomLine:"solid 1px rgb(220, 220, 220)",
-  sectionBackgroundColor: "white",
+  breakpoints:{
+    phoneMedia:767
+  }
 }
 
 export default theme;

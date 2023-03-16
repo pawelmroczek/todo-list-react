@@ -1,20 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  background-color: ${({theme})=>theme.sectionBackgroundColor};
+  background-color: ${({ theme }) => theme.colors.white};
   padding: 0px;
-  box-shadow: 0px 0px 18px -11px rgba(66, 68, 90, 1);
+  box-shadow: 0px 0px 18px -11px ${({ theme }) => theme.colors.gunPowder};
   margin-top: 10px;
-  color:${({theme})=>theme.primeColor};
+  color: ${({ theme }) => theme.colors.black};
 `;
 
 export const Header = styled.header`
   padding: 1px 10px 0px;
-  border-bottom: ${({ theme }) => theme.borderBottomLine};
+  border-bottom: solid ${({ theme }) => theme.colors.alto} 1px;
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: ${({ theme }) => theme.media.phone}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.phoneMedia}px) {
     flex-direction: column;
   }
 `;
@@ -27,5 +27,5 @@ export const Body = styled.div`
   display: flex;
   justify-content: center;
   text-align: left;
-  background-color: ${({theme})=>theme.sectionBackgroundColor}; 
+  background-color: ${({ theme }) => theme.colors.white};
 `;

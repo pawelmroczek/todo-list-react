@@ -7,7 +7,7 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  border-bottom: ${({ theme }) => theme.borderBottomLine};
+  border-bottom: solid ${({ theme }) => theme.colors.alto} 1px;
   padding: 5px;
   font-size: 17px;
   display: flex;
@@ -34,26 +34,22 @@ export const Button = styled.button`
   transition: 500ms ease-in-out;
   cursor: pointer;
 
+  &:hover {
+    filter: brightness(140%);
+  }
+
   ${({ toggle }) =>
     toggle &&
     css`
-      background-color: rgb(27, 134, 34);
+      background-color: ${({ theme }) => theme.colors.forestGreen};
       color: white;
       font-size: 25px;
-
-      &:hover {
-        background-color: rgb(34, 170, 43);
-      }
     `}
 
   ${({ remove }) =>
     remove &&
     css`
-      background-color: rgb(240, 47, 68);
-
-      &:hover {
-        background-color: rgb(165, 3, 22);
-      }
+      background-color: ${({ theme }) => theme.colors.amaranth};
     `}
 `;
 
@@ -62,7 +58,9 @@ export const Content = styled.div`
   flex-grow: 1;
   margin-left: 5px;
 
-  ${({done})=>done && css`
-  text-decoration:line-through;
-  `}
+  ${({ done }) =>
+    done &&
+    css`
+      text-decoration: line-through;
+    `}
 `;

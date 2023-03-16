@@ -10,21 +10,21 @@ export const Container = styled.div`
 export const Button = styled.button`
   border: none;
   background: none;
-  color: ${({theme})=>theme.buttonsColor};
+  color: ${({ theme }) => theme.buttonsColor};
   font-weight: 300;
   font-size: 18px;
   transition: 500ms ease-in-out;
   cursor: pointer;
 
-  &:hover{
-    color: ${({theme})=>theme.buttonsColorHover};
+  &:hover {
+    color: ${({ theme }) => theme.buttonsColorHover};
   }
 
-  &:disabled{
-    color: lightgray;
+  &:disabled {
+    color: ${({ theme }) => theme.colors.lightgray};
   }
 
-  &:disabled:hover{
+  &:disabled:hover {
     color: lightgray;
   }
-`
+`;
