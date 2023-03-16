@@ -16,6 +16,8 @@ The following technologies were used in this project:
 - JSX
 - BEM
 - normalize.css
+- styled-components
+- own Hooks
 
 ## Usage
 
