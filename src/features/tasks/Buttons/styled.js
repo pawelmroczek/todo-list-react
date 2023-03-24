@@ -10,14 +10,14 @@ export const Container = styled.div`
 export const Button = styled.button`
   border: none;
   background: none;
-  color: ${({ theme }) => theme.buttonsColor};
+  color: ${({ theme }) => theme.colors.teal};
   font-weight: 300;
   font-size: 18px;
   transition: 500ms ease-in-out;
   cursor: pointer;
 
   &:hover {
-    color: ${({ theme }) => theme.buttonsColorHover};
+    filter: brightness(150%);
   }
 
   &:disabled {
@@ -26,5 +26,6 @@ export const Button = styled.button`
 
   &:disabled:hover {
     color: lightgray;
+    filter: brightness(100%);
   }
 `;
