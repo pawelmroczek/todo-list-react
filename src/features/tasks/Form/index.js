@@ -8,19 +8,20 @@ const Form = () => {
   const [newTaskValue, setNewTaskValue] = useState("");
   const inputRef = useRef(null);
 
-const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   const onSubmit = (event) => {
     event.preventDefault();
 
     const trimmedValue = newTaskValue.trim();
-
     if (trimmedValue) {
-      dispatch(addTask({
-        content:trimmedValue,
-        done:false,
-        id:nanoid(),
-      }))
+      dispatch(
+        addTask({
+          content: trimmedValue,
+          done: false,
+          id: nanoid(),
+        })
+      );
       setNewTaskValue("");
     }
     inputRef.current.focus();
