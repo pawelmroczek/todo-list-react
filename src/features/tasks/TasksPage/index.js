@@ -4,8 +4,8 @@ import TaskList from "./TaskList"
 import Buttons from "./Buttons";
 import Section from "../../../common/Section";
 import { Container } from "../../../common/Container/styled";
-import { useLocation } from "react-router-dom/cjs/react-router-dom";
 import Search from "./Search";
+import FetchButton from "./FetchButton";
 
 function Tasks() {
 
@@ -13,7 +13,7 @@ function Tasks() {
   return (
     <Container>
       <Header header={"Lista zadań"} />
-      <Section header="Dodaj nowe zadanie" body={<Form />} />
+      <Section header="Dodaj nowe zadanie" body={<Form />} extraContent={<FetchButton/>} />
       <Section header="Wyszukiwarka" body={<Search />} />
       <Section
         header="Lista zadań"
