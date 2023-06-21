@@ -1,13 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 20px;
-`;
-
-export const Button = styled.button`
+const Button = styled.button`
   border: none;
   background: none;
   color: ${({ theme }) => theme.colors.teal};
@@ -29,3 +22,5 @@ export const Button = styled.button`
     filter: brightness(100%);
   }
 `;
+
+export default Button;

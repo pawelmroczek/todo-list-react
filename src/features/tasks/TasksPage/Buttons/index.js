@@ -1,4 +1,5 @@
-import { Container, Button } from "./styled";
+import { Container } from "./styled";
+import Button from "../Button";
 import { useSelector, useDispatch } from "react-redux";
 import {
   toggleHideDone,
@@ -7,7 +8,7 @@ import {
   selectIsEveryTasksDone,
   selectHideDone,
   fetchExampleTasks
-} from "../tasksSlice";
+} from "../../tasksSlice";
 
 const Buttons = () => {
   const areTasksEmpty = useSelector(selectAreTasksEmpty);
