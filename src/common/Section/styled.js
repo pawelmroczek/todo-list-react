@@ -25,7 +25,9 @@ export const Title = styled.h2`
 
 export const Body = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: left;
   background-color: ${({ theme }) => theme.colors.white};
+  padding:20px;
+  font-size:20px;
 `;
