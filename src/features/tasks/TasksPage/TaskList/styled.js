@@ -1,10 +1,16 @@
 import styled, { css } from "styled-components";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 export const List = styled.ul`
   list-style: none;
   width: 95%;
   padding: 0;
 `;
+
+export const StyledLink = styled(Link)`
+  text-decoration:none;
+  color:${({theme})=>theme.colors.teal};
+`
 
 export const Item = styled.li`
   border-bottom: solid ${({ theme }) => theme.colors.alto} 1px;
