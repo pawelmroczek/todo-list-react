@@ -6,11 +6,15 @@ export const StyledNavLink = styled(NavLink)`
   text-decoration:none;
   font-weight:300;
   font-size:20px;
-
+  margin:20px;
 
   &.active{
     font-weight:700;
     color:white;
+  }
+  
+  &:hover{
+    border-bottom:1px solid white;
   }
 `
 
@@ -20,11 +24,10 @@ export const StyledNavigation = styled.nav`
   display:flex;
   justify-content:center;
   background-color:${({theme})=>theme.colors.teal};
-  padding:5px;
 `
 
 export const StyledList = styled.ul`
   display:flex;
-  gap:40px;
+  
   list-style: none;;
 `
