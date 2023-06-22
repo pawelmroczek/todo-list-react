@@ -16,13 +16,11 @@ function TaskPage() {
       <Section
         header={task ? task.content : "Nie znaleziono zadania 😔"}
         body={
-          task ? (
+          task && (
             <>
               <StyledStrong>Ukończono: </StyledStrong>{" "}
               {task && task.done ? "Tak" : "Nie"}
             </>
-          ) : (
-            <></>
           )
         }
       />
