@@ -4,6 +4,7 @@ import { Container } from "../../../common/Container/styled";
 import { useParams } from "react-router-dom/cjs/react-router-dom";
 import { useSelector } from "react-redux";
 import { getTaskById } from "../tasksSlice";
+import { StyledStrong } from "./styled";
 
 function TaskPage() {
   const {id} = useParams();
@@ -13,8 +14,9 @@ function TaskPage() {
     <Container>
       <Header header={"Szczegóły zadania"} />
       <Section
-        header={task ? task.content : "Nie znaleziono zadania"}
-        body={<><strong>Ukończono: </strong> { task && task.done ?  "Tak" : "Nie"}</>}
+        header={task ? task.content : "Nie znaleziono zadania 😔"}
+        
+        body={task ? <><StyledStrong>Ukończono: </StyledStrong> { task && task.done ?  "Tak" : "Nie"}</> : <></>}
       />
     </Container>
   );
