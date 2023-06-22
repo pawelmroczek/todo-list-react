@@ -1,6 +1,6 @@
 # To-Do List
 
-This project is a to-do list web application built with React, using JSX syntax. The application allows users to add tasks, change their status or remove them. Also, users can hide already completed tasks or finish all tasks with one click of a button.
+This project is a to-do list web application built with React, using JSX syntax. The application allows users to add tasks, change their status or remove them. Also, users can hide already completed tasks or finish all tasks with one click of a button. The application now includes additional features such as task filtering and the ability to download sample tasks.
 
 ## Table of Contents
 
@@ -18,6 +18,7 @@ The following technologies were used in this project:
 - normalize.css
 - styled-components
 - Redux
+- Redux Saga
 
 ## Usage
 
@@ -29,6 +30,8 @@ To use the application, simply navigate to the [to-do list page](https://pawelmr
 4. Click the "🗑" button to remove a task from the list
 5. Click the "Ukryj ukończone" button to hide all completed tasks
 6. Click the "Ukończ wszystkie" button to mark all tasks as completed
+7. Click the "Pobierz przykładowe zadania" button to fetch sample tasks
+8. Input a filter in "Wyszukiwarka"
 
 ## Screenshots
 
