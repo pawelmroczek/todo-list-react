@@ -7,36 +7,25 @@ import {
   Route,
   Redirect,
 } from "react-router-dom/cjs/react-router-dom";
-import { StyledNavLink, StyledNavigation, StyledList } from "./styled";
+import Navigation from "./navigation";
+import { toTask, toTasks, toAuthor } from "./routes";
 
 const App = () => (
   <HashRouter>
-    <StyledNavigation>
-      <StyledList>
-        <li>
-          <StyledNavLink to="/zadania">
-            Zadania
-          </StyledNavLink>
-        </li>
-        <li>
-          <StyledNavLink to="/autor">
-            O autorze
-          </StyledNavLink>
-        </li>
-      </StyledList>
-    </StyledNavigation>
+    <Navigation />
+
     <Switch>
-    <Route path="/zadania/:id">
+      <Route path={toTask()}>
         <TaskPage />
       </Route>
-      <Route path="/zadania">
+      <Route path={toTasks()}>
         <TasksPage />
       </Route>
-      <Route path="/autor">
+      <Route path={toAuthor()}>
         <Author />
       </Route>
       <Route path="/">
-        <Redirect to="/zadania" />
+        <Redirect to={toTasks()} />
       </Route>
     </Switch>
   </HashRouter>
