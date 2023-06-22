@@ -36,6 +36,6 @@ function* saveTasksInLocalStorageHandler() {
 }
 
 export function* tasksSaga() {
-  yield throttle(1000,fetchExampleTasks.type, fetchExampleTasksHandler);
+  yield throttle(1000, fetchExampleTasks.type, fetchExampleTasksHandler);
   yield takeEvery("*", saveTasksInLocalStorageHandler);
 }

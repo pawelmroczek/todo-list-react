@@ -8,9 +8,9 @@ export const List = styled.ul`
 `;
 
 export const StyledLink = styled(Link)`
-  text-decoration:none;
-  color:${({theme})=>theme.colors.teal};
-`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.teal};
+`;
 
 export const Item = styled.li`
   border-bottom: solid ${({ theme }) => theme.colors.alto} 1px;

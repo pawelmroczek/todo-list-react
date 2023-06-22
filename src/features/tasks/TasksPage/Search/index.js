@@ -1,4 +1,3 @@
-import { useHistory, useLocation } from "react-router-dom/cjs/react-router-dom";
 import Input from "../../Input";
 import searchQueryParamName from "../searchQueryParamName";
 import {

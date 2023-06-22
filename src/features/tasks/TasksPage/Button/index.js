@@ -14,7 +14,7 @@ const Button = styled.button`
   }
 
   &:disabled {
-    transition:none;
+    transition: none;
     color: ${({ theme }) => theme.colors.lightgray};
   }
 

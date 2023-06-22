@@ -32,9 +32,9 @@ const tasksSlice = createSlice({
     setTasks: (state, { payload: tasks }) => {
       state.tasks = tasks;
     },
-    toggleFetchStatus: (state)=>{
-      state.fetchingTasks=!state.fetchingTasks
-    }
+    toggleFetchStatus: (state) => {
+      state.fetchingTasks = !state.fetchingTasks;
+    },
   },
 });
 
@@ -72,6 +72,7 @@ export const selectTasksByQuery = (state, query) => {
   );
 };
 
-export const selectFetchStatus = (state) => selectTasksState(state).fetchingTasks;
+export const selectFetchStatus = (state) =>
+  selectTasksState(state).fetchingTasks;
 
 export default tasksSlice.reducer;

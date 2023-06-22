@@ -7,9 +7,11 @@ const FetchButton = () => {
   const fetchStatus = useSelector(selectFetchStatus);
 
   return (
-    <Button onClick={() => dispatch(fetchExampleTasks())} disabled={fetchStatus}>
+    <Button
+      onClick={() => dispatch(fetchExampleTasks())}
+      disabled={fetchStatus}
+    >
       {fetchStatus ? "Ładowanie..." : "Pobierz przykładowe zadania"}
-      
     </Button>
   );
 };

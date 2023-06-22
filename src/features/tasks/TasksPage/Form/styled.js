@@ -12,8 +12,6 @@ export const StyledForm = styled.form`
   }
 `;
 
-
-
 export const Button = styled.button`
   color: white;
   background-color: ${({ theme }) => theme.colors.teal};
