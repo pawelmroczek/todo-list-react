@@ -3,18 +3,16 @@ import TaskPage from "./features/tasks/TaskPage";
 import Author from "./features/author/AuthorPage";
 import {
   HashRouter,
-  NavLink,
   Switch,
   Route,
   Redirect,
-  useParams,
 } from "react-router-dom/cjs/react-router-dom";
-import { StyledNavLink } from "./styled";
+import { StyledNavLink, StyledNavigation, StyledList } from "./styled";
 
 const App = () => (
   <HashRouter>
-    <nav>
-      <ul>
+    <StyledNavigation>
+      <StyledList>
         <li>
           <StyledNavLink to="/zadania">
             Zadania
@@ -25,8 +23,8 @@ const App = () => (
             O autorze
           </StyledNavLink>
         </li>
-      </ul>
-    </nav>
+      </StyledList>
+    </StyledNavigation>
     <Switch>
     <Route path="/zadania/:id">
         <TaskPage />
