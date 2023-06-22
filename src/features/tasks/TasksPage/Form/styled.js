@@ -21,7 +21,7 @@ export const Button = styled.button`
   padding: 10px;
   font-size: 20px;
   font-weight: 300;
-  margin-left: 5px;
+  margin-left: 25px;
   transition: 500ms;
   flex-shrink: 0;
 

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Input = styled.input`
   width: 100%;
   font-size: 20px;
-  padding: 5px;
+  padding: 7px;
   border: solid ${({ theme }) => theme.colors.alto} 1px;
   border-radius: 1px;
   flex-shrink: 3;
